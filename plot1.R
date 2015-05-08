@@ -14,7 +14,8 @@ febdata <- transform(febdata,Date=as.Date(Date,"%d/%m/%Y"),
 windows() #calling to have the graph displayed on windows screen
 hist(febdata$Global_active_power,col="red",
            main = "Global Active Power", #main title for hist
-           xlab="Global Active Power(kilowatts)" # label x axis
+           xlab="Global Active Power(kilowatts)", # label x axis
+           bg = "white"
      )
 dev.copy(png, file = "plot1.png") ## Copy my plot to a PNG file
 dev.off() ## Don't forget to close the PNG device!
