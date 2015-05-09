@@ -14,7 +14,9 @@ febdata <- transform(febdata,Date=as.Date(Date,"%d/%m/%Y"),
 
 windows() #calling to have the graph displayed on windows screen
 #while plotting using Type="c" to supress the pch points and then adding line to it
-plot(febdata$DateTime,febdata$Global_active_power,type="c",ylab="Global Active Power(kilowatts)",xlab="")
+plot(febdata$DateTime,febdata$Global_active_power,type="c",
+     ylab="Global Active Power(kilowatts)",xlab="",
+     bg="white")
 lines(febdata$DateTime,febdata$Global_active_power)
 dev.copy(png, file = "plot2.png") ## Copy my plot to a PNG file
 dev.off() ## Don't forget to close the PNG device!
